@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-primary: "Alata", sans-serif;
+  --font-secondary: "Josefin Sans", sans-serif;
+  --font-size: 15px;
+
+  --section-width: 1115px;
+}
+
+.center--center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  background-image: url("./images/desktop/image-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 650px;
+  max-width: 100vw;
+  padding: 64px;
+}
+
+.hero {
+  max-width: var(--section-width);
+  margin: 0 auto;
+  position: relative;
+}
+
+.nav--menu a {
+  text-decoration: none;
+  color: white;
+
+  font-family: var(--font-primary);
+  padding-inline: 16px;
+}
+
+.header-text {
+  position: absolute;
+  max-width: 551px;
+  height: auto;
+  left: 0;
+  top: 224px;
+  padding: 16px;
+
+  font-family: Josefin Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 72px;
+  text-transform: uppercase;
+
+  color: white;
+  border: solid 3px white;
+}
+
+@media screen and (max-width: 375px) {
+  header {
+    padding: 24px 40px;
+  }
+
+  .logo-nav {
+    width: 145px;
+    height: auto;
+  }
+
+  .nav--menu {
+    display: none;
+  }
+
+  .header-text {
+    font-size: 32px;
+    line-height: 48px;
+    width: auto;
+  }
+}
