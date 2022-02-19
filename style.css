@@ -15,6 +15,20 @@
   --very-dark-grey: hsl(0, 0%, 41%);
 }
 
+.attribution {
+  font-family: var(--font-primary);
+  font-size: 11px;
+  text-align: center;
+
+  border-top: solid 1px var(--dark-gray);
+  padding: 16px;
+  background-color: black;
+  color: var(--dark-gray);
+}
+.attribution a {
+  color: var(--dark-gray);
+  text-decoration: underline;
+}
 .center--center {
   display: flex;
   justify-content: space-between;
@@ -53,7 +67,7 @@ header {
   top: 224px;
   padding: 16px;
 
-  font-family: Josefin Sans;
+  font-family: var(--font-secondary);
   font-style: normal;
   font-weight: 300;
   font-size: 72px;
@@ -107,9 +121,151 @@ header {
   color: var(--dark-gray);
 }
 
+.creation {
+  max-width: var(--section-width);
+  margin: 0 auto;
+
+  display: grid;
+  /*prettier-ignore*/
+  grid-template-columns: auto 160px;
+  gap: 48px;
+  grid-template-areas:
+    "heading button"
+    "content content";
+}
+
+.creation--heading {
+  grid-area: heading;
+  font-size: 48px;
+  text-transform: uppercase;
+  font-family: var(--font-secondary);
+}
+
+.creation--content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  grid-area: content;
+}
+
+.creation--content > div {
+  width: 256px;
+  height: 450px;
+  padding: 32px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.creation--content > div p {
+  color: white;
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  font-size: 32px;
+}
+
+.creation--content_1 {
+  background-image: url("./images/desktop/image-deep-earth.jpg");
+}
+.creation--content_2 {
+  background-image: url("./images/desktop/image-night-arcade.jpg");
+}
+.creation--content_3 {
+  background-image: url("./images/desktop/image-soccer-team.jpg");
+}
+.creation--content_4 {
+  background-image: url("./images/desktop/image-grid.jpg");
+}
+.creation--content_5 {
+  background-image: url("./images/desktop/image-from-above.jpg");
+}
+.creation--content_6 {
+  background-image: url("./images/desktop/image-pocket-borealis.jpg");
+}
+.creation--content_7 {
+  background-image: url("./images/desktop/image-curiosity.jpg");
+}
+.creation--content_8 {
+  background-image: url("./images/desktop/image-fisheye.jpg");
+}
+
+.creation--content_button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.creation--content_button a {
+  grid-area: button;
+  padding: 8px 20px;
+  font-family: var(--font-primary);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  max-width: 160px;
+  border: solid 2px black;
+}
+
+footer {
+  background-color: black;
+  padding: 95px;
+  margin-top: 200px;
+}
+
+.footer--container {
+  max-width: var(--section-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer--nav,
+.footer--info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer--nav_logo img {
+  height: 24px;
+}
+
+.footer--info {
+  align-items: flex-end;
+}
+
+.footer--nav_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer--nav_menu a {
+  text-decoration: none;
+  color: white;
+  font-family: var(--font-secondary);
+}
+
+.footer--info_social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer--info_copyright {
+  color: var(--dark-gray);
+  font-family: var(--font-secondary);
+}
+
 /* mobile-design */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 769px) {
   header {
     padding: 24px 40px;
   }
@@ -175,5 +331,88 @@ header {
   .interactive--description_paragraph {
     max-width: 300px;
     text-align: center;
+  }
+
+  .creation {
+    display: grid;
+    /*prettier-ignore*/
+    grid-template-columns: 1fr;
+    gap: 48px;
+    grid-template-areas:
+      "heading"
+      "content"
+      "button";
+  }
+
+  .creation--heading {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .creation--content {
+    gap: unset;
+    row-gap: 30px;
+    place-content: center;
+  }
+
+  .creation--content > div {
+    width: 327px;
+    height: 120px;
+    padding: 16px;
+
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .creation--content_1 {
+    background-image: url("./images/mobile/image-deep-earth.jpg");
+  }
+  .creation--content_2 {
+    background-image: url("./images/mobile/image-night-arcade.jpg");
+  }
+  .creation--content_3 {
+    background-image: url("./images/mobile/image-soccer-team.jpg");
+  }
+  .creation--content_4 {
+    background-image: url("./images/mobile/image-grid.jpg");
+  }
+  .creation--content_5 {
+    background-image: url("./images/mobile/image-from-above.jpg");
+  }
+  .creation--content_6 {
+    background-image: url("./images/mobile/image-pocket-borealis.jpg");
+  }
+  .creation--content_7 {
+    background-image: url("./images/mobile/image-curiosity.jpg");
+  }
+  .creation--content_8 {
+    background-image: url("./images/mobile/image-fisheye.jpg");
+  }
+
+  .creation--content_button {
+    justify-content: center;
+  }
+
+  footer {
+    padding: 48px;
+  }
+
+  .footer--container {
+    flex-direction: column;
+    row-gap: 48px;
+  }
+
+  .footer--nav_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer--nav_menu {
+    flex-direction: column;
+  }
+
+  .footer--info {
+    align-items: center;
   }
 }
