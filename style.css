@@ -29,7 +29,7 @@
   color: var(--dark-gray);
   text-decoration: underline;
 }
-.center--center {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -157,6 +157,13 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
+
+  cursor: pointer;
+  backdrop-filter: brightness(50%);
+}
+
+.creation--content > div:hover {
+  opacity: 0.5;
 }
 
 .creation--content > div p {
@@ -169,24 +176,31 @@ header {
 .creation--content_1 {
   background-image: url("./images/desktop/image-deep-earth.jpg");
 }
+
 .creation--content_2 {
   background-image: url("./images/desktop/image-night-arcade.jpg");
 }
+
 .creation--content_3 {
   background-image: url("./images/desktop/image-soccer-team.jpg");
 }
+
 .creation--content_4 {
   background-image: url("./images/desktop/image-grid.jpg");
 }
+
 .creation--content_5 {
   background-image: url("./images/desktop/image-from-above.jpg");
 }
+
 .creation--content_6 {
   background-image: url("./images/desktop/image-pocket-borealis.jpg");
 }
+
 .creation--content_7 {
   background-image: url("./images/desktop/image-curiosity.jpg");
 }
+
 .creation--content_8 {
   background-image: url("./images/desktop/image-fisheye.jpg");
 }
@@ -196,6 +210,11 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.creation--content_button a:hover {
+  background-color: black;
+  color: white;
 }
 
 .creation--content_button a {
@@ -263,7 +282,8 @@ footer {
   font-family: var(--font-secondary);
 }
 
-.nav--menu_mobile {
+.nav--menu_mobile,
+.hamburger {
   display: none;
 }
 
@@ -272,6 +292,10 @@ footer {
 @media screen and (max-width: 769px) {
   header {
     padding: 24px 40px;
+  }
+
+  .hamburger {
+    display: block;
   }
 
   .logo-nav {
